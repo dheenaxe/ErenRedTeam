@@ -19,7 +19,7 @@ Write-Host -Fore Red
 " 
 
 Write-Host -Fore Red "            Eren Perakende Red Team" 
-Write-Host -Fore Gray "          https://github.com/dheenaxe/erenredteam"
+Write-Host -Fore Gray "          https://github.com/dheenaxe/ErenRedTeam"
 Write-Host ""
 Write-Host ""
 
