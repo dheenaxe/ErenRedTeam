@@ -1,6 +1,7 @@
 ﻿$file = Get-ChildItem -Path "C:\eren\" -Filter "*.vhdx" -Recurse
 
-$ftpServer = "ftp://10.21.0.13 " 
+$ftpServer = "ftp://10.21.0.13"
+$ftpUsername = "tester" 
 $ftpPassword = "password" 
 $ftpPath = "/" 
 
