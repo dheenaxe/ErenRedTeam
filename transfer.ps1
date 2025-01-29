@@ -17,8 +17,8 @@ if (Test-Connection -ComputerName 10.12.0.26 -Count 2 -Quiet) {
         $ftpRequest.UsePassive = $true
 
 
-        $chunkSize = 1048576 
-        $fileSize = $file.Length
+        $chunkSize = 1048576  
+        $fileSize = [System.Int64]$file.Length  
         $bytesUploaded = 0
 
         $fileStream = [System.IO.File]::OpenRead($filePath)
@@ -30,9 +30,7 @@ if (Test-Connection -ComputerName 10.12.0.26 -Count 2 -Quiet) {
             $bytesToRead = [Math]::Min($chunkSize, $fileSize - $bytesUploaded)
             $buffer = New-Object byte[] $bytesToRead
 
-     
             $fileStream.Read($buffer, 0, $bytesToRead)
-
 
             $ftpStream.Write($buffer, 0, $bytesToRead)
 
@@ -46,9 +44,4 @@ if (Test-Connection -ComputerName 10.12.0.26 -Count 2 -Quiet) {
 
         $ftpResponse = $ftpRequest.GetResponse()
         Write-Output "File uploaded successfully to FTP server (10.12.0.26)"
-    } else {
-        Write-Output ".vhdx file not found."
     }
-} else {
-    Write-Output "Unable to reach the network path 10.12.0.26"
-}
