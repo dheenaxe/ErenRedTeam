@@ -1,13 +1,18 @@
 ﻿$file = Get-ChildItem -Path "C:\eren\" -Filter "*.vhdx" -Recurse
 
-if ($file) {
-    $vhdxFileName = $file.FullName  # Get the full path of the file
+$networkPath = "\\10.1.1.1\Ortak\ortak_haftalik\RedTeam"
 
-    $destinationPath = "O:\ortak_haftalik\RedTeam"
+if (Test-Connection -ComputerName 10.1.1.1 -Count 2 -Quiet) {
+    Write-Output "10.1.1.1 is in reach"
+    if ($file) {
+        $vhdxFileName = $file.FullName
 
-    Copy-Item -Path $vhdxFileName -Destination $destinationPath
+        Copy-Item -Path $vhdxFileName -Destination $networkPath
 
-    Write-Output "Copied to $destinationPath"
+        Write-Output "Copied to $networkPath"
+    } else {
+        Write-Output ".vhdx file not found."
+    }
 } else {
-    Write-Output ".vhdx not found."
+    Write-Output "Unable to reach the network path \\10.1.1.1"
 }
