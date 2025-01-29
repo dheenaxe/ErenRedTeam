@@ -2,7 +2,7 @@
 
 Get-ChildItem "C:\eren"
 
-Invoke-WebRequest "http://10.12.2.88/cyberpipe/Cyber.7z" -OutFile "C:\eren\"
+Invoke-WebRequest "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/Cyber.7z" -OutFile "C:\eren\"
 
 Start-Process "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/7zr.exe" -ArgumentList "x", "C:\eren\Cyber.7z", "-oC:\eren\", "-y" -Wait
  
