@@ -1,18 +1,21 @@
 ﻿$file = Get-ChildItem -Path "C:\eren\" -Filter "*.vhdx" -Recurse
 
-$networkPath = "\\10.1.1.1\Ortak\ortak_haftalik\RedTeam"
+$networkPath = "http://127.0.0.1:80/upload"
 
-if (Test-Connection -ComputerName 10.1.1.1 -Count 2 -Quiet) {
-    Write-Output "10.1.1.1 is in reach"
+if (Test-Connection -ComputerName 127.0.0.1 -Count 2 -Quiet) {
     if ($file) {
-        $vhdxFileName = $file.FullName
+        $filePath = $file.FullName
 
-        Copy-Item -Path $vhdxFileName -Destination $networkPath
+        $fileContent = [System.IO.File]::ReadAllBytes($filePath)
+        $headers = @{"Content-Type" = "multipart/form-data"}
+        $body = @{
+                    "files" = [System.Convert]::ToBase64String($fileContent)
+                }
 
-        Write-Output "Copied to $networkPath"
+        $response = Invoke-RestMethod -Uri $uri -Method Post -Body $body -Headers $headers
     } else {
         Write-Output ".vhdx file not found."
     }
 } else {
-    Write-Output "Unable to reach the network path \\10.1.1.1"
+    Write-Output "Unable to reach the network path 127.0.0.1"
 }
