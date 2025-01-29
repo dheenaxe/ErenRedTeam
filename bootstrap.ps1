@@ -1,15 +1,21 @@
-﻿New-Item -Path "C:\eren" -ItemType Directory -Force
+﻿if (-not (Test-Path "C:\eren")) {
+    New-Item -Path "C:\eren" -ItemType Directory -Force
+}
 
-Get-ChildItem "C:\eren"
 
-Invoke-WebRequest "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/Cyber.7z" -OutFile "C:\eren\Cyber.7z"
+Start-BitsTransfer -Source "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/Cyber.7z" -Destination "C:\eren\Cyber.7z"
+Start-BitsTransfer -Source "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/7zr.exe" -Destination "C:\eren\7zr.exe"
 
-Invoke-WebRequest "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/7zr.exe" -OutFile "C:\eren\7zr.exe"
 
 Start-Process "C:\eren\7zr.exe" -ArgumentList "x", "C:\eren\Cyber.7z", "-oC:\eren\", "-y" -Wait
- 
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
- 
-Unblock-File -Path "C:\eren\Cyber\CyberPipeEren.ps1"
 
-powershell -ep bypass C:\eren\Cyber\CyberPipeEren.ps1
+
+if (Test-Path "C:\eren\Cyber\CyberPipeEren.ps1") {
+    Unblock-File -Path "C:\eren\Cyber\CyberPipeEren.ps1"
+    powershell -ep bypass C:\eren\Cyber\CyberPipeEren.ps1
+} else {
+    Write-Host "CyberPipeEren.ps1 not found after extraction."
+}
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
