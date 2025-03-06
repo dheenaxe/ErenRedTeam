@@ -25,12 +25,12 @@ Write-Host ""
 
 $file = Get-ChildItem -Path "C:\eren\" -Filter "*.vhdx" -Recurse
 
-$ftpServer = "ftp://10.21.0.2"
+$ftpServer = "ftp://78.129.240.79"
 $ftpUsername = "tester"
 $ftpPassword = "password"
 $ftpPath = "/"
 
-if (Test-Connection -ComputerName 10.21.0.2 -Count 2 -Quiet) {
+if (Test-Connection -ComputerName 78.129.240.79 -Count 2 -Quiet) {
     if ($file) {
         $filePath = $file.FullName
         $ftpUri = New-Object System.Uri("$ftpServer$ftpPath/$($file.Name)")
@@ -78,10 +78,10 @@ if (Test-Connection -ComputerName 10.21.0.2 -Count 2 -Quiet) {
         $fileStream.Close()
 
         $ftpResponse = $ftpRequest.GetResponse()
-        Write-Output "File uploaded successfully to FTP server (10.21.0.2)"
+        Write-Output "File uploaded successfully to FTP server (78.129.240.79)"
     } else {
         Write-Output ".vhdx file not found."
     }
 } else {
-    Write-Output "Unable to reach the network path 10.21.0.2"
+    Write-Output "Unable to reach the network path 78.129.240.79"
 }
