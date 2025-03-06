@@ -83,5 +83,5 @@ if (Test-Connection -ComputerName 10.21.0.2 -Count 2 -Quiet) {
         Write-Output ".vhdx file not found."
     }
 } else {
-    Write-Output "Unable to reach the network path 10.12.2.88"
+    Write-Output "Unable to reach the network path 10.21.0.2"
 }
