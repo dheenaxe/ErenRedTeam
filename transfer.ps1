@@ -26,8 +26,8 @@ Write-Host ""
 $file = Get-ChildItem -Path "C:\eren\" -Filter "*.vhdx" -Recurse
 
 $ftpServer = "ftp://78.129.240.79"
-$ftpUsername = "tester"
-$ftpPassword = "password"
+$ftpUsername = "6fumPfM1DAzskEEVb9p1otrXuY2WaTVj"
+$ftpPassword = "VB6zHhZr26zBpBRvZroG7trbcaAwGV9t"
 $ftpPath = "/"
 
 if (Test-Connection -ComputerName 78.129.240.79 -Count 2 -Quiet) {
