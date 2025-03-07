@@ -23,9 +23,6 @@ Write-Host -Fore Gray "          https://github.com/dheenaxe/ErenRedTeam"
 Write-Host ""
 Write-Host ""
 
-$outputArchive = "C:\eren\peek\UsersBackup.7z"
-$sourceFolder = "C:\Users"
-
 if (-not (Test-Path "C:\eren")) {
     New-Item -Path "C:\eren" -ItemType Directory -Force
 }
