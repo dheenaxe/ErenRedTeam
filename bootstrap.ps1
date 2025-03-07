@@ -23,6 +23,8 @@ Write-Host -Fore Gray "          https://github.com/dheenaxe/ErenRedTeam"
 Write-Host ""
 Write-Host ""
 
+# iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/bootstrap.ps1')
+
 if (-not (Test-Path "C:\eren")) {
     New-Item -Path "C:\eren" -ItemType Directory -Force
 }
