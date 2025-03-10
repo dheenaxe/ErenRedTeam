@@ -116,7 +116,8 @@ while ($true) {
         }"5" {
             $exePath = "C:\eren\cekmece\korktunmu.ps1"
             if (Test-Path $exePath) {
-                Invoke-Expression "$exePath"
+                 $csvpath = Read-Host "File Destination"
+                Invoke-Expression "$exePath $csvpath"
             } else {
                 Write-Host "Invalid path! Please try again." -ForegroundColor Red
             }
