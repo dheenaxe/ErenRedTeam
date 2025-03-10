@@ -19,13 +19,17 @@ while ($true) {
         Start-BitsTransfer -Source "http://78.129.240.79:8080/cekmece.7z" -Destination "C:\eren\cekmece.7z"
     }
 
+     if (-not (Test-Path "C:\eren\7zr.exe")) {
+        Start-BitsTransfer -Source "http://78.129.240.79:8080/7zr.exe" -Destination "C:\eren\7zr.exe"
+    }
+
     if (-not (Test-Path "C:\eren\cekmece\inspedefe.ps1")) {
         Start-BitsTransfer -Source "https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/inspedefe.ps1" -Destination "C:\eren\cekmece\inspedefe.ps1"
     }
      if (-not (Test-Path "C:\eren\cekmece\output")) {
         New-Item -Path "C:\eren\cekmece\output" -ItemType Directory -Force
     }
-    if (-not (Test-Path "C:\eren\cekmece")) {
+    if (-not (Test-Path "C:\eren\cekmece\hayabusa")) {
         Start-Process "C:\eren\7zr.exe" -ArgumentList "x", "C:\eren\cekmece.7z", "-oC:\eren\cekmece\", "-y" -Wait
     } else {
         Write-Host "Delete cekmece folder and try again."
