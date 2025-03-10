@@ -72,7 +72,13 @@ while ($true) {
             if (Test-Path $exePath) {
                 $csvpath = Read-Host ".evtx File Destination"
                 if ($csvpath) {
-                    Invoke-Expression "$exePath csv-timeline -f $csvpath -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html"
+                    if ()
+                    if (-not (Test-Path "C:\eren\cekmece\output\csv-timeline.html")) {
+                        Invoke-Expression "$exePath csv-timeline -f $csvpath -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html"
+                    }
+                    else {
+                        Invoke-Expression "$exePath csv-timeline -f $csvpath -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html -clobber"
+                    }
                     Invoke-Expression "C:\eren\cekmece\net6\TimelineExplorer\TimelineExplorer.exe  C:\eren\cekmece\output\csv-timeline.csv"
                 }
                 Invoke-Expression "$exePath csv-timeline -l -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html"
