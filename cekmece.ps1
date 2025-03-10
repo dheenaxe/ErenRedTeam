@@ -74,8 +74,7 @@ while ($true) {
                 if ($csvpath) {
                     if (-not (Test-Path "C:\eren\cekmece\output\csv-timeline.html")) {
                         Invoke-Expression "$exePath csv-timeline -f $csvpath -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html"
-                    }
-                    else {
+                    } else {
                         Invoke-Expression "$exePath csv-timeline -f $csvpath -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html -clobber"
                     }
                     Invoke-Expression "C:\eren\cekmece\net6\TimelineExplorer\TimelineExplorer.exe  C:\eren\cekmece\output\csv-timeline.csv"
