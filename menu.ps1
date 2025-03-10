@@ -3,8 +3,11 @@
     Write-Host "1: Hayabusa CSV Timeline"
     Write-Host "2: Hayabusa Logon Analyze"
     Write-Host "3: Chainsaw Hunt"
+    Write-Host "4: PDF Header Analyze"
     Write-Host "Çıkmak için CTRL + C"
 }
+
+# Chainsaw kuralları güncellerken, bir yandan da Net6 indirilsin.
 
 while ($true) {
 
@@ -59,18 +62,8 @@ while ($true) {
     $choice = Read-Host "Enter your choice"
     
     switch ($choice) {
-        "3" {
-            $exePath = "C:\eren\cekmece\chainsaw\chainsaw.exe"
-            if (Test-Path $exePath) {
-                $csvpath = Read-Host ".evtx File Destination"
-                Invoke-Expression "$exePath hunt $csvpath -s C:/eren/cekmece/chainsaw/sigma_all_rules/ --mapping C:/eren/cekmece/chainsaw/mappings/sigma-event-logs-all.yml -o C:/eren/cekmece/output/hunt.csv"
-                Invoke-Expression "C:\eren\cekmece\net6\TimelineExplorer\TimelineExplorer.exe  output\hunt.csv"
-            } else {
-                Write-Host "Invalid path! Please try again." -ForegroundColor Red
-            }
-        }
         "1" {
-            $exePath = "C:\eren\cekmece\\hayabusa\hayabusa-3.1.0-win-x64.exe"
+            $exePath = "C:\eren\cekmece\hayabusa\hayabusa-3.1.0-win-x64.exe"
             if (Test-Path $exePath) {
                 $csvpath = Read-Host ".evtx File Destination"
                 if ($csvpath) {
@@ -79,7 +72,7 @@ while ($true) {
                 }
                 Invoke-Expression "$exePath csv-timeline -l -o C:\eren\cekmece\output\csv-timeline.csv -H C:\eren\cekmece\output\csv-timeline.html"
                 Invoke-Expression "C:\eren\cekmece\net6\TimelineExplorer\TimelineExplorer.exe  C:\eren\cekmece\output\csv-timeline.csv"
-            } else {
+            } else {q13
                 Write-Host "Invalid path! Please try again." -ForegroundColor Red
             }
         }
@@ -104,10 +97,16 @@ while ($true) {
             } else {
                 Write-Host "Invalid path! Please try again." -ForegroundColor Red
             }
+        }"4" {
+            $exePath = "C:\eren\cekmece\inspedefe.ps1"
+            if (Test-Path $exePath) {
+                $csvpath = Read-Host "File Destination"
+                Invoke-Expression "$exePath $csvpath -o C:\eren\cekmece\output\pdfheader.txt"
+            } else {
+                Write-Host "Invalid path! Please try again." -ForegroundColor Red
+            }
         }
-        default {
-            Write-Host "Invalid selection. Please try again." -ForegroundColor Red
-        }
+            
     }
     
     Write-Host "Press Enter to continue..."
