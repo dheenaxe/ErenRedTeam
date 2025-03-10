@@ -27,3 +27,5 @@ Invoke-Expression "choco upgrade chocolatey"
 Invoke-Expression "choco install -y python3"
 Invoke-Expression "python --version"
 Invoke-Expression "python -m pip install --upgrade pip"
+
+Invoke-Expression "pip3 install oletools"
