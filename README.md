@@ -16,7 +16,7 @@ iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 ## menu.ps1
 Triage tools with little automation
 ``` powershell
-iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/menu.ps1') 
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/cekmece.ps1') 
 ```
 
 ## inspedefe.ps1
