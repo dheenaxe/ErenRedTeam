@@ -4,6 +4,7 @@
     Write-Host "2: Hayabusa Logon Analyze"
     Write-Host "3: Chainsaw Hunt"
     Write-Host "4: PDF Header Analyze"
+    Write-Host "5: Olevba"
     Write-Host "Çıkmak için CTRL + C"
 }
 
@@ -107,6 +108,13 @@ while ($true) {
             if (Test-Path $exePath) {
                 $csvpath = Read-Host "Folder Destination"
                 Invoke-Expression "$exePath $csvpath -o C:\eren\cekmece\output\pdfheader.txt"
+            } else {
+                Write-Host "Invalid path! Please try again." -ForegroundColor Red
+            }
+        }"5" {
+            $exePath = "C:\eren\cekmece\korktunmu.ps1"
+            if (Test-Path $exePath) {
+                Invoke-Expression "$exePath"
             } else {
                 Write-Host "Invalid path! Please try again." -ForegroundColor Red
             }
