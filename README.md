@@ -13,7 +13,7 @@ Automatically finds .vhdx file in the determined destination path and sends it t
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/transfer.ps1')
 ```
 
-## menu.ps1
+## cekmece.ps1
 Triage tools with little automation
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/cekmece.ps1') 
