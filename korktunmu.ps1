@@ -1,7 +1,3 @@
-param (
-    [string]$FilePath = "."
-)
-
 Clear-Host
 Write-Host ""
 Write-Host ""
@@ -31,9 +27,3 @@ Invoke-Expression "choco upgrade chocolatey"
 Invoke-Expression "choco install -y python3"
 Invoke-Expression "python --version"
 Invoke-Expression "python -m pip install --upgrade pip"
-Invoke-Expression "pip3 install oletools"
-Invoke-Expression "pip3 show oletools"
-$oletoolsPath = python -c "import oletools, os; print(os.path.dirname(oletools.__file__))"
-Write-Host "Oletools is installed at: $oletoolsPath" -Fore Green
-Invoke-Expression "python $oletoolsPath/olevba.py $FilePath"
-

@@ -1,10 +1,11 @@
 ﻿function Show-Menu {
     Write-Host "Select an option:" -ForegroundColor Cyan
+    Write-Host "0: Python & PIP Installation"
     Write-Host "1: Hayabusa CSV Timeline"
     Write-Host "2: Hayabusa Logon Analyze"
     Write-Host "3: Chainsaw Hunt"
     Write-Host "4: PDF Header Analyze"
-    Write-Host "5: Olevba"
+    Write-Host "5: Olevba Analyze"
     Write-Host "Çıkmak için CTRL + C"
 }
 
@@ -70,6 +71,14 @@ while ($true) {
     $choice = Read-Host "Enter your choice"
     
     switch ($choice) {
+         "0" {
+            $exePath = "C:\eren\cekmece\korktunmu.ps1"
+            if (Test-Path $exePath) {
+                Invoke-Expression "$exePath"
+            } else {
+                Write-Host "korktunmu.ps1 dosyası bulunamadı" -ForegroundColor Red
+            }
+        }
         "1" {
             $exePath = "C:\eren\cekmece\hayabusa\hayabusa-3.1.0-win-x64.exe"
             if (Test-Path $exePath) {
@@ -114,7 +123,7 @@ while ($true) {
                 Write-Host "Invalid path! Please try again." -ForegroundColor Red
             }
         }"5" {
-            $exePath = "C:\eren\cekmece\korktunmu.ps1"
+            $exePath = "C:\eren\cekmece\olegunnar.ps1"
             if (Test-Path $exePath) {
                  $csvpath = Read-Host "File Destination"
                 Invoke-Expression "$exePath $csvpath"
