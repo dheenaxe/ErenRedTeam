@@ -20,7 +20,7 @@ iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 ```
 
 ## inspedefe.ps1
-a string search tool inspired by Didier Stevens's PDFiD
+String search tool inspired by Didier Stevens's PDFiD
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/inspedefe.ps1') 
 ```
@@ -32,7 +32,7 @@ iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 ```
 
 ## olegunnar.ps1
-A glue to use ole-tools
+Glue to use ole-tools
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/korktunmu.ps1') 
 ```
