@@ -9,8 +9,6 @@
     Write-Host "Çıkmak için CTRL + C"
 }
 
-# Chainsaw kuralları güncellerken, bir yandan da Net6 indirilsin.
-
 while ($true) {
     
     if (-not (Test-Path "C:\eren")) {
