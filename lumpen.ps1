@@ -37,6 +37,7 @@ $processes = Get-Process | Sort-Object ProcessName
 foreach ($proc in $processes) {
     $match = $automationKeywords | Where-Object { $proc.ProcessName -like "*$_*" }
     $allResults += [PSCustomObject]@{
+        ComputerName  = $computerName
         Source        = "Process"
         Name          = $proc.ProcessName
         Identifier    = $proc.Id
@@ -64,10 +65,12 @@ foreach ($line in $tasks) {
     }
     if ($line -eq "") {
         if ($taskBlock.Count -gt 0) {
+            
             $taskName = $taskBlock["TaskName"]
             $taskCmd = $taskBlock["Task To Run"]
             $match = $automationKeywords | Where-Object { $taskCmd -like "*$_*" }
             $allResults += [PSCustomObject]@{
+                ComputerName  = $computerName
                 Source        = "ScheduledTask"
                 Name          = $taskName
                 Identifier    = ""
