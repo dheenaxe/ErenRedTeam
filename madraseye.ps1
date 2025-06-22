@@ -41,7 +41,6 @@ while ($true) {
             Write-Host "`n[ErenRedTeam] rules deleted successfully!" -ForegroundColor Green
         }
         "1" {
-            Get-NetFirewallRule | Where-Object { $_.DisplayName -match "^\[ErenRedTeam\]" } | Remove-NetFirewallRule
 
             $ipAddresses = @(
                 "213.74.174.212",
@@ -79,7 +78,6 @@ while ($true) {
                     -Enabled True
             }
         } "2" {
-            Get-NetFirewallRule | Where-Object { $_.DisplayName -match "^\[ErenRedTeam\]" } | Remove-NetFirewallRule
             
             $fqdns = @(
                 "ic2integra.globalblue.com",

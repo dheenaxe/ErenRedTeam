@@ -68,7 +68,7 @@ iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 ```
 
 ## madraseye.ps1
-Firewall Deployment
+Windows Firewall Rule Management
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/madraseye.ps1') 
 ```
