@@ -38,3 +38,12 @@ if (Get-LocalUser -Name $username -ErrorAction SilentlyContinue) {
 }
 
 Write-Host "Generated password for '$username': $passwordPlain"
+
+Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
+
+$rdpStatus = (Get-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections").fDenyTSConnections
+if ($rdpStatus -eq 0) {
+    Write-Output "✅ Remote Desktop is ENABLED."
+} else {
+    Write-Output "❌ Remote Desktop is DISABLED."
+}
