@@ -76,8 +76,7 @@ if (Test-Connection -ComputerName 78.129.240.79 -Count 2 -Quiet) {
 
         $ftpStream.Close()
         $fileStream.Close()
-
-        $ftpResponse = $ftpRequest.GetResponse()
+        
         Write-Output "File uploaded successfully to FTP server (78.129.240.79)"
     } else {
         Write-Output ".vhdx file not found."
